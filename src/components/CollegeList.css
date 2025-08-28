@@ -1,0 +1,49 @@
+.college-list-container {
+  margin-top: 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.college-list-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.college-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.college-table th,
+.college-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.college-table th {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.college-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.college-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.college-table a {
+  color: #2196f3;
+  text-decoration: none;
+}
+
+.college-table a:hover {
+  text-decoration: underline;
+}
