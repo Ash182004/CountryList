@@ -7,17 +7,20 @@ function App() {
   const [colleges, setColleges] = useState([]);
 
   // Function to fetch universities by country
-  const fetchColleges = async (country) => {
-    try {
-      const response = await fetch(
-        `http://universities.hipolabs.com/search?country=${country}`
-      );
-      const data = await response.json();
-      setColleges(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+ const fetchColleges = async (country) => {
+  try {
+    const API_URL =
+      process.env.NODE_ENV === "production"
+        ? "https://universities.hipolabs.com"
+        : "http://universities.hipolabs.com"; // works locally
+
+    const response = await fetch(`${API_URL}/search?country=${country}`);
+    const data = await response.json();
+    setColleges(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
 
   return (
     <div className="app">
